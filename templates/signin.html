@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Login Page</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    h1,
+    h2 {
+        text-shadow: 0.1em 0.1em 0.2em #333;
+    }
+
+    .heading {
+        padding: 3vh;
+        text-align: center;
+        background-color: #215c84;
+        color: white;
+    }
+
+    .content {
+        margin: auto;
+        width: 15vw;
+        display: grid;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .flask-input {
+        padding: 1vh;
+        margin-bottom: 2vh;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        margin: auto;
+        width: 30%;
+        font-size: 1.2em;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    @media(max-width:600px) {
+        .content {
+            width: 90vw;
+        }
+    }
+</style>
+
+<body>
+    <div class="heading">
+        <h2>歡迎光臨，請輸入帳號密碼</h2>
+    </div>
+    <form method="POST" action="/auth">
+        <div class="content">
+            <h2 style="text-align: center;">登入系統</h2>
+            <label for="ACCT">帳號 </label><input class="flask-input" type="text" placeholder="請輸入帳號" name="acctName">
+            <label for="PWD">密碼 </label><input class="flask-input" type="password" placeholder="請輸入密碼" name="pwd">
+            <button type="submit">登入</button>
+        </div>
+    </form>
+    <hr style="border: solid 1px lightgray;">
+</body>
+
+</html>
